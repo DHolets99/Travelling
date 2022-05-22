@@ -480,11 +480,13 @@ img {
 
 .top_cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 58px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 58px;
+    grid-row-gap: 58px;
 }
 
 .top_card {
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
 }
@@ -637,7 +639,11 @@ img {
 
 /*media start*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+    .header_wrapper {
+        padding-top: 30px;
+    }
+
     .header_burger {
         display: block;
     }
@@ -703,6 +709,119 @@ img {
     .header_nav-close-line:last-child {
         transform: translateY(-50%) rotate(-45deg);
     }
+
+    .intro {
+        padding-top: 150px;
+        padding-bottom: 120px;
+    }
+
+    .intro_title {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .intro_subtitle {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 30px;
+    }
+
+    .search_form-field {
+        margin-right: 0;
+        width: 100%;
+        padding-bottom: 15px;
+        background: transparent url(../img/svg/circl-icon.svg) no-repeat left 4px;
+    }
+
+    .search_form-field::placeholder {
+        font-size: 14px;
+    }
+
+    .search_form-submit {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .benefit_card {
+        grid-column: span 3;
+    }
 }
 
+
+@media screen and (max-width: 960px) {
+    .search_form-field {
+        margin-bottom: 25px;
+    }
+
+    .benefits_wrap {
+        box-shadow: none;
+    }
+
+    .benefits {
+        margin-bottom: 50px;
+    }
+
+    .benefits_title {
+        padding: 50px 15px;
+    }
+
+    .benefits_cards {
+        padding: 0 15px;
+        grid-column-gap: 35px;
+    }
+    
+    .benefit_card {
+        margin-bottom: 50px;
+    }
+
+    .place_card-lg {
+        grid-column: span 6;
+        height: 283px;
+    }
+
+    .place_card-sm {
+        grid-column: span 6;
+    }
+
+    .tours_tour {
+        grid-column-gap: 25px;
+    }
+
+    .tour_info {
+        margin-left: 0;
+    }
+
+    .tour_title {
+        margin-bottom: 15px;
+    }
+
+    .tour_desc {
+        margin-bottom: 15px;
+    }
+
+    .top {
+        margin-bottom: 130px;
+    }
+
+    .top_cards {
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+    }
+
+    .top_card {
+        grid-column: span 3;
+    }
+
+    .top_card-pic {
+        margin-bottom: 25px;
+    }
+
+    .top_card-desc {
+        margin-bottom: 25px;
+    }
+
+    .footer {
+        padding: 60px 0;
+    }
+}
 /*media end*/
